@@ -1,0 +1,41 @@
+{
+  "bin": {
+    "envdoc": "dist/cli.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1",
+    "zod": "^3"
+  },
+  "description": "Environment documentation checker: scans code for actual env var usage (process.env, import.meta.env, os.environ, getenv) and diffs it against .env.example, reporting used-but-undocumented, documented-but-unused, and undocumented-default vars.",
+  "devDependencies": {
+    "@types/node": "^20",
+    "tsx": "^4",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "dist",
+    "server.json"
+  ],
+  "homepage": "https://github.com/CloudCorpRecords/envdoc#readme",
+  "license": "MIT",
+  "mcpName": "io.github.CloudCorpRecords/envdoc",
+  "name": "@reneturcios/envdoc",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CloudCorpRecords/envdoc.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli.ts",
+    "test": "tsx --test test/*.test.ts"
+  },
+  "type": "module",
+  "version": "0.1.0"
+}
